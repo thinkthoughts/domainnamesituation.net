@@ -1,0 +1,14 @@
+server {
+    listen 80;
+    server_name domainnamesituation.net www.domainnamesituation.net;
+
+    root /var/www/domainnamesituation.net;
+    index index.html;
+
+    access_log /var/log/nginx/domainnamesituation_access.log;
+    error_log /var/log/nginx/domainnamesituation_error.log;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+}
