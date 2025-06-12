@@ -28,17 +28,31 @@
   </header>
 
   <main>
-    <p>Welcome. This is a sketchbook index of domains, directions, and decisions.</p>
+  <h2>Domain Archive</h2>
+  <ul id="domain-list">Loading...</ul>
+</main>
 
-    <h2>Quick Links</h2>
-    <ul>
-      <li><a href="translatepi.ai">TranslatePi.ai</a></li>
-      <li><a href="pi-table.html">Pi Refinement Table</a></li>
-      <li><a href="msf.html">Memory-Structured Feminism</a></li>
-      <li><a href="decimalism.html">Why Decimalism Fails</a></li>
-      <li><a href="10-10.html">Why 10 − 10 = 20</a></li>
-    </ul>
-  </main>
+<script>
+  fetch("domains.json")
+    .then(res => res.json())
+    .then(domains => {
+      const list = document.getElementById("domain-list");
+      list.innerHTML = "";
+      domains.forEach(domain => {
+        const item = document.createElement("li");
+        item.innerHTML = `<strong>${domain.name}</strong> 
+          <em>[${domain.status}]</em> — 
+          ${domain.notes} 
+          <small>(${domain.tags.join(", ")})</small>`;
+        list.appendChild(item);
+      });
+    })
+    .catch(err => {
+      document.getElementById("domain-list").innerText = "Error loading domain list.";
+      console.error(err);
+    });
+</script>
+
 
 </body>
 </html>
