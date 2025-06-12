@@ -1,0 +1,26 @@
+[
+  {
+    "name": "translatepi.ai",
+    "status": "live",
+    "tags": ["pi", "physics", "feminism"],
+    "notes": "Main site for memory-structured pi translations and equations."
+  },
+  {
+    "name": "domainnamesituation.net",
+    "status": "building",
+    "tags": ["index", "meta", "sketchbook"],
+    "notes": "Meta-project to list, prioritize, and organize domain ideas and timelines."
+  },
+  {
+    "name": "triplettrustprotocol.org",
+    "status": "draft",
+    "tags": ["triplet", "trust", "resistance"],
+    "notes": "Protocol for 1+1+1 trust decisions across time."
+  },
+  {
+    "name": "feministrage.info",
+    "status": "live",
+    "tags": ["feminism", "activism"],
+    "notes": "Focused on stopping genocide, supporting MSF and feminist journalism."
+  }
+]
